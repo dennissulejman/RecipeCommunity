@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeWPFUI", "RecipeWPFUI\RecipeWPFUI.csproj", "{81CA9212-8877-476E-9052-FD8F69F20383}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeLibrary", "RecipeLibrary\RecipeLibrary.csproj", "{6E57B63D-0AE7-4742-962A-2D63441097BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81CA9212-8877-476E-9052-FD8F69F20383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81CA9212-8877-476E-9052-FD8F69F20383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81CA9212-8877-476E-9052-FD8F69F20383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81CA9212-8877-476E-9052-FD8F69F20383}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E57B63D-0AE7-4742-962A-2D63441097BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E57B63D-0AE7-4742-962A-2D63441097BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E57B63D-0AE7-4742-962A-2D63441097BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E57B63D-0AE7-4742-962A-2D63441097BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66A86D00-F53E-4B83-A9EA-09101B8E40A9}
+	EndGlobalSection
+EndGlobal
