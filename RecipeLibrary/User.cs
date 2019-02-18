@@ -12,6 +12,6 @@ namespace RecipeWPFUI
         [Key]
         public string Username { get; set; }
         public string Password { get; set; }
-        public Dish Dish { get; set; }
+        public RecipeList RecipeList { get; set; }
     }
 }

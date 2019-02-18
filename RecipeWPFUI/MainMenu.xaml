@@ -4,33 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RecipeWPFUI"
+        xmlns:views="clr-namespace:RecipeWPFUI.Views"
         mc:Ignorable="d"
         Title="Recipe Community" Height="500" Width="650
         
-        " WindowStartupLocation="Manual" Foreground="White" Background="#FF171717">
-    <Grid Margin="168,10,185,352">
-        <Label x:Name="welcomeLabel" Content="&#x9;         Welcome!&#xA;Choose either a type of cuisine or search in &#xA;the box to get cooking!" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.842,-0.63" Width="239" Height="57" SnapsToDevicePixels="True" Foreground="White"/>
-        <ListView x:Name="cuisineListView" Height="308" Margin="-160,108,176,-309" VerticalAlignment="Top">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-            <ListViewItem x:Name="italianCuisineListViewItem" Content="Italian" Margin="0"/>
-            <ListViewItem x:Name="frenchCuisineListViewItem" Content="French" Margin="0"/>
-            <ListViewItem x:Name="asianCuisineListViewItem" Content="Asian" Margin="0"/>
-            <ListViewItem x:Name="americanCuisineListViewItem" Content="American" Margin="0"/>
-        </ListView>
-        <ListView x:Name="searchListView" HorizontalAlignment="Left" Height="308" Margin="186,108,-170,-309" VerticalAlignment="Top" Width="273">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <TextBox x:Name="searchTextBox" HorizontalAlignment="Left" Height="23" Margin="186,71,-170,0" TextWrapping="Wrap" Text="Search by ingredient." VerticalAlignment="Top" Width="273"/>
-        <Label x:Name="cuisinesLabel" Content="Cuisines:" HorizontalAlignment="Left" Height="23" Margin="-160,71,0,0" VerticalAlignment="Top" Width="103" Foreground="White"/>
-
+        " WindowStartupLocation="Manual" Foreground="White" Background="#FF171717" ResizeMode="CanMinimize">
+    <Grid>
+        <views:RecipeView x:Name="RecipeViewControl" Loaded ="RecipeViewControl_Loaded"/>
     </Grid>
 
 </Window>

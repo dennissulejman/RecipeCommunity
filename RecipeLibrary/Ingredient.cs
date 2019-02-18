@@ -10,5 +10,8 @@ namespace RecipeWPFUI
     {
         public int IngredientId { get; set; }
         public string Name { get; set; }
+        public string Category { get; set; }
+        public int DishId { get; set; }
+        public Dish Dish { get; set; }
     }
 }

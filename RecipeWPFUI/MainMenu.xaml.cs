@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,11 +21,20 @@ namespace RecipeWPFUI
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {
+    {        
+        public RecipeContext db = new RecipeContext();
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        private void RecipeViewControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            ViewModel.RecipeViewModel recipeViewModelObject =
+               new ViewModel.RecipeViewModel();
+            recipeViewModelObject.LoadDishes();
+            recipeViewModelObject.LoadCuisines();
+            RecipeViewControl.DataContext = recipeViewModelObject;
+        }
     }
 }

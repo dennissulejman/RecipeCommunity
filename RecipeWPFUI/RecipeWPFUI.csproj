@@ -143,10 +143,43 @@
     <Compile Include="Migrations\20190125080140_InitialMigration.designer.cs">
       <DependentUpon>20190125080140_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20190125092446_Second-Migration.cs" />
+    <Compile Include="Migrations\20190125092446_Second-Migration.designer.cs">
+      <DependentUpon>20190125092446_Second-Migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190125092624_Third-Migration.cs" />
+    <Compile Include="Migrations\20190125092624_Third-Migration.designer.cs">
+      <DependentUpon>20190125092624_Third-Migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190126102829_Fourth-Migration.cs" />
+    <Compile Include="Migrations\20190126102829_Fourth-Migration.designer.cs">
+      <DependentUpon>20190126102829_Fourth-Migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190126103201_Fifth-Migration.cs" />
+    <Compile Include="Migrations\20190126103201_Fifth-Migration.designer.cs">
+      <DependentUpon>20190126103201_Fifth-Migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190214164857_SixthMigration.cs" />
+    <Compile Include="Migrations\20190214164857_SixthMigration.designer.cs">
+      <DependentUpon>20190214164857_SixthMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190214165308_SeventhMigration.cs" />
+    <Compile Include="Migrations\20190214165308_SeventhMigration.designer.cs">
+      <DependentUpon>20190214165308_SeventhMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190215161223_EightMigration.cs" />
+    <Compile Include="Migrations\20190215161223_EightMigration.designer.cs">
+      <DependentUpon>20190215161223_EightMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190217181101_NinthMigration.cs" />
+    <Compile Include="Migrations\20190217181101_NinthMigration.designer.cs">
+      <DependentUpon>20190217181101_NinthMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\RecipeContextModelSnapshot.cs" />
-    <Compile Include="RecipeContext.cs" />
-    <Compile Include="RecipePage.xaml.cs">
-      <DependentUpon>RecipePage.xaml</DependentUpon>
+    <Compile Include="Model\RecipeContext.cs" />
+    <Compile Include="ViewModel\RecipeViewModel.cs" />
+    <Compile Include="Views\RecipeView.xaml.cs">
+      <DependentUpon>RecipeView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainMenu.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -160,7 +193,7 @@
       <DependentUpon>MainMenu.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="RecipePage.xaml">
+    <Page Include="Views\RecipeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -198,6 +231,7 @@
       <Name>RecipeLibrary</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

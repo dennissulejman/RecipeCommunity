@@ -11,6 +11,6 @@ namespace RecipeWPFUI
     {
         [Key]
         public string TypeOfCuisine { get; set; }
-        public Dish Dish { get; set; }
+        public ICollection<Dish> Dishes { get; set; } = new List<Dish>();
     }
 }
