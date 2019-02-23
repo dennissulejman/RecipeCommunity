@@ -22,7 +22,6 @@ namespace RecipeWPFUI
     /// </summary>
     public partial class MainWindow : Window
     {        
-        public RecipeContext db = new RecipeContext();
         public MainWindow()
         {
             InitializeComponent();
@@ -32,8 +31,6 @@ namespace RecipeWPFUI
         {
             ViewModel.RecipeViewModel recipeViewModelObject =
                new ViewModel.RecipeViewModel();
-            recipeViewModelObject.LoadDishes();
-            recipeViewModelObject.LoadCuisines();
             RecipeViewControl.DataContext = recipeViewModelObject;
         }
     }

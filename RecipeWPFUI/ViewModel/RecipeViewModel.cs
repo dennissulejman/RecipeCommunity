@@ -4,24 +4,33 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using RecipeWPFUI.Views;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
+using System.Windows.Input;
+using System.IO;
+using static System.Net.Mime.MediaTypeNames;
+using System.Windows.Controls;
+using System.Diagnostics;
 
 namespace RecipeWPFUI.ViewModel
 {
     public class RecipeViewModel : INotifyPropertyChanged
     {
+        public RecipeViewModel()
+        {
+            LoadDishes();
+            LoadCuisines();
+        }
+
         RecipeContext db = new RecipeContext();
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public void OnPropertyChanged(String info)
+        public void OnPropertyChanged(string info)
         {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(info));
         }
 
         public ObservableCollection<Cuisine> Cuisines
@@ -36,28 +45,35 @@ namespace RecipeWPFUI.ViewModel
             set;
         }
 
+        public string DescriptionTextBox
+        {
+            get
+            {
+                return "Find dishes by choosing \n" +
+                       "cuisine or search for \n" +
+                       "dishes from ingredients \n" +
+                       "to the right.";
+            }
+        }
+
         public void LoadCuisines()
         {
             var cuisines = new ObservableCollection<Cuisine>();
-
-            List<Cuisine> allCuisines = db.Cuisines.Select(c => c).ToList();
+            List<Cuisine> allCuisines = db.Cuisines
+                            .Include(d => d.Dishes)
+                            .ToList();
             allCuisines.ForEach(c => cuisines.Add(c));
-         
             Cuisines = cuisines;
         }
 
         public void LoadDishes()
         {
-            //var joinedIngredients = db.Ingredients.Join(db.Dishes,
-            //                     ingredient => ingredient.DishId,
-            //                     dish => dish.DishId,
-            //                     (ingredient, dish) => ingredient).ToList();
-
             var dishes = new ObservableCollection<Dish>();
-            var allIngredients = db.Ingredients.Select(i => i).ToList();
-            var allDishes = db.Dishes.Where(d => d.Ingredients.Any(i => i.DishId == d.DishId)).ToList();           
-            allIngredients.ForEach(i => allDishes.ForEach(d => d.Ingredients.Add(i)));
-            allDishes.ForEach(d => dishes.Add(d));           
+            List<Dish> allDishes = db.Dishes
+            .Include(d => d.DishIngredientAssemblies)
+            .ThenInclude(d => d.Ingredient)
+            .ToList();
+            allDishes.ForEach(d => dishes.Add(d));
             _view = new ListCollectionView(dishes);
         }
 
@@ -66,31 +82,75 @@ namespace RecipeWPFUI.ViewModel
         {
             get { return _view; }
         }
-        
-        private string _SearchForDishesFromIngredient;
-        public string SearchForDishesFromIngredient           
-        {            
-            get { return _SearchForDishesFromIngredient; }
+
+        private string _searchForDishesFromIngredient = "Search here.";
+        public string SearchForDishesFromIngredient
+        {
+
+            get { return _searchForDishesFromIngredient; }
             set
             {
-                _SearchForDishesFromIngredient = value;
+                _searchForDishesFromIngredient = value;
                 OnPropertyChanged("SearchForDishesFromIngredient");
                 if
                     (string.IsNullOrEmpty(value))
                 {
                     View.Filter = null;
                 }
-                else 
+                else
                 {
                     View.Filter = item =>
                     {
                         {
                             Dish dish = item as Dish;
-                            return dish.Ingredients.Any(i => i.Name.ToUpper().Contains(value.ToUpper()) && dish.DishId == i.DishId);
+                            return dish.DishIngredientAssemblies
+                                    .Any(i => i.Ingredient.Name.ToUpper()
+                                    .Contains(value.ToUpper()));
                         }
                     };
                 }
             }
         }
+
+        private System.Drawing.Image _dishPicture;
+        private Dish _selectedDish;
+        public Dish SelectedDish
+        {
+            get { return _selectedDish; }
+            set
+            {
+                _selectedDish = value;
+                if (_selectedDish != null)
+                {
+                    _dishPicture = SelectedDish.ByteArrayToImage(_selectedDish.Picture);
+                }
+                else
+                {
+                    _dishPicture = null;
+                }
+                OnPropertyChanged("SelectedDish");
+            }
+        }
+
+        private Cuisine _selectedCuisine;
+        public Cuisine SelectedCuisine
+        {
+            get { return _selectedCuisine; }
+            set
+            {
+                _selectedCuisine = value;
+                View.Filter = item =>
+                {
+                    {
+                        Dish dish = item as Dish;
+                        return _selectedCuisine.Dishes
+                        .Any(c => c.Cuisine.Dishes
+                        .Any(d => d.DishName == dish.DishName));
+                    }
+                };
+                OnPropertyChanged("SelectedCuisine");
+            }
+        }
+
     }
 }
