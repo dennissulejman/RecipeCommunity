@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\App.xaml
-2-1553604233
+32020117322
 
-361879933033
+391734145524
 149-1680165889
-MainMenu.xaml;Views\RecipeView.xaml;
+Views\MainMenu.xaml;Views\LoginView.xaml;Views\RecipeView.xaml;
 
 False
 

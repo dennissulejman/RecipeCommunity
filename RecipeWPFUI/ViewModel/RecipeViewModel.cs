@@ -1,18 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
-using RecipeWPFUI.Views;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Data;
-using System.Windows.Input;
-using System.IO;
-using static System.Net.Mime.MediaTypeNames;
-using System.Windows.Controls;
-using System.Diagnostics;
+using System.Drawing;
 
 namespace RecipeWPFUI.ViewModel
 {
@@ -112,7 +104,7 @@ namespace RecipeWPFUI.ViewModel
             }
         }
 
-        private System.Drawing.Image _dishPicture;
+        private Image _dishPicture;
         private Dish _selectedDish;
         public Dish SelectedDish
         {

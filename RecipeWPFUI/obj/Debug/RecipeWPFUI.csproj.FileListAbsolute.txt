@@ -320,11 +320,9 @@ C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\bin\Debug\System.Nume
 C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\obj\Debug\RecipeWPFUI.csprojAssemblyReference.cache
 C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\obj\Debug\RecipeWPFUI.exe.config
-C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\obj\Debug\MainMenu.g.cs
 C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\obj\Debug\App.g.cs
 C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\obj\Debug\RecipeWPFUI_MarkupCompile.cache
 C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\obj\Debug\RecipeWPFUI_MarkupCompile.lref
-C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\obj\Debug\MainMenu.baml
 C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\obj\Debug\RecipeWPFUI.g.resources
 C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\obj\Debug\RecipeWPFUI.Properties.Resources.resources
 C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\obj\Debug\RecipeWPFUI.csproj.GenerateResource.cache
@@ -335,3 +333,7 @@ C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\obj\Debug\RecipeWPFUI
 C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\obj\Debug\Views\RecipeView.g.cs
 C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\obj\Debug\Views\RecipeView.baml
+C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\obj\Debug\Views\LoginView.g.cs
+C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\obj\Debug\Views\LoginView.baml
+C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\obj\Debug\Views\MainMenu.g.cs
+C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\obj\Debug\Views\MainMenu.baml

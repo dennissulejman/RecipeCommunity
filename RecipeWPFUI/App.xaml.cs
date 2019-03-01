@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using RecipeWPFUI.ViewModel;
+using RecipeWPFUI.Views;
 using System.Windows;
 
 namespace RecipeWPFUI
@@ -13,5 +9,10 @@ namespace RecipeWPFUI
     /// </summary>
     public partial class App : Application
     {
+        private void ApplicationStart(object sender, StartupEventArgs e)
+        {
+            Window login = new LoginView();
+            login.Show();
+        }
     }
 }
