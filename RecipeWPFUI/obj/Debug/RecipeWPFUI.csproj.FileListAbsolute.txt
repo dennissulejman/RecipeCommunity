@@ -337,3 +337,5 @@ C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\obj\Debug\Views\Login
 C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\obj\Debug\Views\LoginView.baml
 C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\obj\Debug\Views\MainMenu.g.cs
 C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\obj\Debug\Views\MainMenu.baml
+C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\obj\Debug\Views\SignUpView.g.cs
+C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeWPFUI\obj\Debug\Views\SignUpView.baml

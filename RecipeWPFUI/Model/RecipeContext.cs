@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Configuration;
+using System.Linq;
 
 namespace RecipeWPFUI
 {
@@ -18,9 +19,22 @@ namespace RecipeWPFUI
             .ConnectionString, options => options.EnableRetryOnFailure())
             .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
         }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<DishIngredientAssembly>().HasKey(dia => new { dia.IngredientId, dia.DishId });
+        }
+
+        public void DetachAllEntities()
+        {
+            var changedEntries = ChangeTracker.Entries()
+                .Where(e => e.State == EntityState.Added ||
+                            e.State == EntityState.Modified ||
+                            e.State == EntityState.Deleted)
+
+                .ToList();
+            foreach (var entry in changedEntries)
+                entry.State = EntityState.Detached;
         }
     }
 }

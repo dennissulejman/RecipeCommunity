@@ -307,3 +307,4 @@ C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeLibrary\obj\Debug\RecipeLib
 C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeLibrary\obj\Debug\RecipeLibrary.csproj.CopyComplete
 C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeLibrary\obj\Debug\RecipeLibrary.dll
 C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeLibrary\obj\Debug\RecipeLibrary.pdb
+C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeLibrary\obj\Debug\RecipeLibrary.csprojAssemblyReference.cache
