@@ -1,0 +1,9 @@
+C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeLibrary\bin\Debug\netcoreapp3.0\RecipeLibrary.deps.json
+C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeLibrary\bin\Debug\netcoreapp3.0\RecipeLibrary.runtimeconfig.json
+C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeLibrary\bin\Debug\netcoreapp3.0\RecipeLibrary.runtimeconfig.dev.json
+C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeLibrary\bin\Debug\netcoreapp3.0\RecipeLibrary.dll
+C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeLibrary\obj\Debug\netcoreapp3.0\RecipeLibrary.AssemblyInfoInputs.cache
+C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeLibrary\obj\Debug\netcoreapp3.0\RecipeLibrary.AssemblyInfo.cs
+C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeLibrary\bin\Debug\netcoreapp3.0\RecipeLibrary.pdb
+C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeLibrary\obj\Debug\netcoreapp3.0\RecipeLibrary.dll
+C:\Users\Sulejman\source\repos\RecipeCommunity\RecipeLibrary\obj\Debug\netcoreapp3.0\RecipeLibrary.pdb

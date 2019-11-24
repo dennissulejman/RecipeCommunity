@@ -1,0 +1,51 @@
+﻿<Window x:Class="RecipeCommunity.LoginWindow.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:ex="clr-namespace:RecipeCommunity.Extensions"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RecipeCommunity.LoginWindow"
+        mc:Ignorable="d"
+        FocusManager.FocusedElement="{Binding ElementName=UsernameTextBox}"
+        Title="Recipe Community Login" Height="300" Width="500">
+
+    <Window.DataContext>
+        <local:LoginViewModel/>
+    </Window.DataContext>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
+        <TextBlock Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Recipe Community" FontSize="16"/>
+        <TextBlock Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Text ="Username:"/>
+        <TextBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" x:Name="UsernameTextBox" Text="{Binding Username}" Width="120" Height="20">
+            <TextBox.InputBindings>
+                <KeyBinding Key="Return" Command="{Binding LoginUserCommand}"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <TextBlock Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" Text="Password:" x:Name ="PasswordTextBlock"/>
+        <PasswordBox Grid.Column="1" Grid.Row="2" PasswordChar="*" x:Name ="PasswordBox" Width="120" Height="20"
+            ex:PasswordBoxHelper.BindPassword="true" ex:PasswordBoxHelper.BoundPassword="{Binding Path=Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            <PasswordBox.InputBindings>
+                <KeyBinding Key="Return" Command="{Binding LoginUserCommand}"/>
+            </PasswordBox.InputBindings>
+        </PasswordBox>
+        <Button Grid.Column="1" Grid.Row="3" VerticalAlignment="Top" Name="LoginButton" Content="Login" Command="{Binding LoginUserCommand}" Width="120"/>
+        <TextBlock Grid.Column="1" Grid.Row="3" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="New User?" Margin="0,0,180,10"/>
+        <TextBlock Grid.Column="1" Grid.Row="3" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="60,0,0,10">
+        <Hyperlink TextDecorations="{x:Null}" Command="{Binding OpenSignUpWindowCommand}">Press here to create an account.</Hyperlink>
+        </TextBlock>
+    </Grid>
+</Window>

@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RecipeWPFUI
+﻿namespace RecipeLibrary
 {
-    public class User
+    public partial class User
     {
-        [Key]
+        public int UserId { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-        public RecipeList RecipeList { get; set; }
     }
 }
